@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs', title) %>
+
+<% let total = 0 %>
+
+<body>
+
+    <% if(result) { %>
+    <div>Se borró bien</div>
+    <% } else { %>
+    <div>No se pudo borrar</div>
+    <% } %>
+
+    <% items.forEach(item => { %>
+    <div><%= item.nombre %></div>
+    <% total += item.precio %>
+    <% }) %>
+
+    <h3>Total: <%= total %></h3>
+</body>
+
+</html>

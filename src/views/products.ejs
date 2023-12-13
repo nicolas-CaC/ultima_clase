@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs', title) %>
+
+<% let total = 0 %>
+
+<body>
+
+    <% items.forEach(item => { %>
+    <div><%= item.nombre %></div>
+    <% total += item.precio %>
+    <% }) %>
+
+    <h3>Total: <%= total %></h3>
+</body>
+
+</html>
