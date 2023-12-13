@@ -7,8 +7,8 @@ export class Products extends ProductsSchema {
 
     constructor() {
         super();
-        ProductsModel.init(this.schema, this.config);
         this.products = ProductsModel;
+        this.products.init(this.schema, this.config);
     }
 
 
